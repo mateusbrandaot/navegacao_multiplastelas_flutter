@@ -2,28 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:navegacao_multiplastelas/screens/categories_screen.dart';
 import 'screens/categories_meals_screen.dart';
 import 'utils/app_routes.dart';
+import 'screens/meal_detail_screnn.dart';
 
 void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
-      theme: ThemeData(
-        primarySwatch: Colors.pink,
-        accentColor: Colors.amber
-      ),
-      routes:{
-        AppRoutes.HOME:(ctx)=>CategoryScreen() ,
-        AppRoutes.CATEGORIES_MEALS:(ctx)=>CategoriesMealsScreen(),
-
+      theme: ThemeData(primarySwatch: Colors.pink, accentColor: Colors.amber),
+      routes: {
+        AppRoutes.HOME: (ctx) => CategoryScreen(),
+        AppRoutes.CATEGORIES_MEALS: (ctx) => CategoriesMealsScreen(),
+        AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(),
       },
+
 
     );
   }
 }
-
-
-
